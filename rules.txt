@@ -1,0 +1,19 @@
+FRIENDS - Regras
+Regras de comportamento:
+001 Respeitar os Termos de Serviço do Discord!
+002 Respeitar as Diretrizes da Comunidade;
+003 Respeitar todos os membros do servidor;
+004 Não compartilhar qualquer conteúdo adulto;
+005 Use o bom senso ao interpretar as regras.
+
+Regras para canais de texto:
+006 Não enviar nenhum tipo de spam;
+007 Evite marcar os admins e moderadores;
+008 Qualquer discriminação resultará em ban;
+009 Não praticar nenhum tipo de comércio.
+
+Regras para canais de voz:
+010 Utilize-os para conversar e fazer amizades;
+011 Não compartilhe conteúdo adulto em live;
+012 Evite qualquer poluição sonora;
+013 Não incentive ou participe de brigas.
