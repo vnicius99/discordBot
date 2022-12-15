@@ -10,14 +10,12 @@ class client(discord.Client):
 
   def __init__(self):
     super().__init__(intents=discord.Intents.default())
-    self.synced = False  #Nós usamos isso para o bot não sincronizar os comandos mais de uma vez
+    self.synced = False  #para o bot não sincronizar os comandos mais de uma vez
 
   async def on_ready(self):
     await self.wait_until_ready()
     if not self.synced:  #Checar se os comandos slash foram sincronizados
-      await tree.sync(
-        guild=discord.Object(id=id_do_servidor)
-      )  # Você também pode deixar o id do servidor em branco para aplicar em todos servidores, mas isso fará com que demore de 1~24 horas para funcionar.
+      await tree.sync(guild=discord.Object(id=id_do_servidor))
       self.synced = True
     print(f"Entramos como {self.user}.")
 
@@ -28,8 +26,7 @@ tree = app_commands.CommandTree(aclient)
 
 @tree.command(guild=discord.Object(id=id_do_servidor),
               name='convite',
-              description='Convite do Servidor'
-              )  #Comando específico para seu servidor
+              description='Convite do Servidor')
 async def slash2(interaction: discord.Interaction):
   await interaction.response.send_message(
     f"Use esse link para convidar seus amigos: https://discord.gg/PW3hzcU8hv",
@@ -38,7 +35,7 @@ async def slash2(interaction: discord.Interaction):
 
 @tree.command(guild=discord.Object(id=id_do_servidor),
               name='ajuda',
-              description='Pedir ajuda')  #Comando específico para seu servidor
+              description='Pedir ajuda')
 async def slash3(interaction: discord.Interaction):
   await interaction.response.send_message(
     f"Confira o canal <#1050558128527249458> para saber mais sobre o servidor, ou entre em contato com a equipe de suporte <#1051304909741502504>",
@@ -47,8 +44,7 @@ async def slash3(interaction: discord.Interaction):
 
 @tree.command(guild=discord.Object(id=id_do_servidor),
               name='regras',
-              description='Canal de Regras.'
-              )  #Comando específico para seu servidor
+              description='Canal de Regras.')
 async def slash4(interaction: discord.Interaction):
   await interaction.response.send_message(
     f"Confira o canal <#1025086181244932226>", ephemeral=True)
